@@ -17,6 +17,9 @@ jobs:
         with:
           node-version: "12.x"
       - run: npm install
+      - run: npm run build --if-present
+        env:
+          CI: true
       - name: Publish
         uses: cloudflare/wrangler-action@1.2.0
         with:
