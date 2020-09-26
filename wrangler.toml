@@ -1,7 +1,6 @@
 name = "notion-cloudflare-worker"
 webpack_config = "webpack.config.js"
 type = "webpack"
-workers_dev = true
 
 account_id = "aed478958648389cc968f48cd3c4075b"
 zone_id = "1d25f1b7e500b1faf44469577d3bd030"
