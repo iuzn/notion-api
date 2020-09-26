@@ -19,7 +19,3 @@ jobs:
       - run: npm install
       - name: Publish
         uses: cloudflare/wrangler-action@1.2.0
-        with:
-          apiToken: ${{ secrets.NOTION_TOKEN }}
-        env:
-          CF_ACCOUNT_ID: ${{secrets.NOTION_TOKEN}}
