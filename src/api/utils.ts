@@ -64,6 +64,7 @@ export const getNotionValue = (
 
           url.searchParams.set("table", "block");
           url.searchParams.set("id", row.value.id);
+          url.searchParams.set("width","600");
           url.searchParams.set("cache", "v2");
 
           return { name: v[0] as string, url: url.toString(), rawUrl };
