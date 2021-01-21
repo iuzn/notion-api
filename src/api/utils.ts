@@ -64,8 +64,8 @@ export const getNotionValue = (
 
           url.searchParams.set("table", "block");
           url.searchParams.set("id", row.value.id);
-          url.searchParams.set("width", "");
-          url.searchParams.set("userId", "");
+          url.searchParams.set("width", "600");
+          url.searchParams.set("userId", "90ef200f-719a-41a7-ae96-33392c3c8371");
           url.searchParams.set("cache", "v2");
 
 
