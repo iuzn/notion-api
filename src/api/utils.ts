@@ -68,9 +68,6 @@ export const getNotionValue = (
           url.searchParams.set("userId", "90ef200f-719a-41a7-ae96-33392c3c8371");
           url.searchParams.set("cache", "v2");
 
-
-
-
           return { name: v[0] as string, url: url.toString(), rawUrl };
         });
     default:
