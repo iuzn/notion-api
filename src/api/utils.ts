@@ -39,6 +39,9 @@ export const getNotionValue = (
     case "title":
       return getTextContent(val);
     case "select":
+    case "email":
+    case "phone_number":
+    case "url":
       return val[0][0];
     case "multi_select":
       return val[0][0].split(",") as string[];
@@ -64,8 +67,6 @@ export const getNotionValue = (
 
           url.searchParams.set("table", "block");
           url.searchParams.set("id", row.value.id);
-          url.searchParams.set("width", "600");
-          url.searchParams.set("userId", "90ef200f-719a-41a7-ae96-33392c3c8371");
           url.searchParams.set("cache", "v2");
 
           return { name: v[0] as string, url: url.toString(), rawUrl };
