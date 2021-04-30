@@ -22,16 +22,16 @@ const corsHeaders = {
 const router = new Router<Handler>();
 
 router.options("*", () => new Response(null, { headers: corsHeaders }));
-router.get("/v1/page/:pageId", pageRoute);
-router.get("/v1/table/:pageId", tableRoute);
-router.get("/v1/user/:userId", userRoute);
-router.get("/v1/search", searchRoute);
+router.get("/v3/page/:pageId", pageRoute);
+router.get("/v3/table/:pageId", tableRoute);
+router.get("/v3/user/:userId", userRoute);
+router.get("/v3/search", searchRoute);
 
 router.get("*", async () =>
   createResponse(
     {
       error: `Route not found!`,
-      routes: ["/v1/page/:pageId", "/v1/table/:pageId", "/v1/user/:pageId"],
+      routes: ["/v3/page/:pageId", "/v3/table/:pageId", "/v3/user/:pageId"],
     },
     {},
     404
